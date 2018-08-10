@@ -1,0 +1,28 @@
+body{
+    background: #333;
+}
+#image{
+    display: flex;
+    justify-content: center;
+}
+nav{
+    background-color: #333;
+    display: flex; 
+    flex-direction: row;
+    align: top;
+    justify-content: space-evenly;
+}
+a{
+    background-color: #333;
+    color: snow;
+    /* display: flex; 
+    flex-direction: row;
+    align: top;
+    justify-content: space-evenly; */
+}
+a:visited{
+    color: snow;
+}
+a:hover{
+    background-color:#111;
+}
