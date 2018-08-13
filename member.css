@@ -56,6 +56,12 @@ a:hover{
 .greennav a:hover{
     background-color: green;
 }
-.aboutus li h1 h2{
+#words{
     color: snow;
+    margin: 4em;
+}
+#h1{
+    color: snow;
+    padding-top: 4em;
+    text-align: center;
 }
