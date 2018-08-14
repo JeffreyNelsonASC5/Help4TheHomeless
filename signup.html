@@ -5,27 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="signup.css">
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBmTrOqzTHNaxk0h6IgGEkvl0j-FTH1jv8",
+            authDomain: "help4thehomeless-a62a9.firebaseapp.com",
+            databaseURL: "https://help4thehomeless-a62a9.firebaseio.com",
+            projectId: "help4thehomeless-a62a9",
+            storageBucket: "help4thehomeless-a62a9.appspot.com",
+            messagingSenderId: "857895826074",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="signup.js" defer></script>
     <title>Sign Up</title>
+
 </head>
 <body>
+    <div id="nav" class="nav">
+        <div class="leftnav">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li class="greennav"><a href="donatepage.html">Donate</a></li>
+                    <li class="greennav"><a href="volunteerpage.html">Volunteer</a></li>
+                    <li><a href="member.html">Our Members</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+    </div>
     <form>
-        <p>
-            First Name:<input type= "text" id="firstname">
-        </p>
-        <p>
-            Last Name: <input type= "text" id="lastname">
-        </p>
-        <p>
-            Email: <input tpye= "text" id="email">
-        </p>
-        <p>
-            PhoneNumber: <input type= "text" id="phonenumber">
-        </p>
-        <p>
-            Address: <input type= "text" id=" address">
-        </p>
-         
-        <input id="submit" type="submit" value="submit">
-    </form>
+        <div class="container">
+              <h1>Register</h1>
+              <p>If you would like to volunteer for Help4TheHomeless, please create an account.</p>
+              <hr>
+              <label for="firstname"><b>First Name:</b></label>
+              <input id="firstname" type="text" placeholder="Enter First Name" name="first name" required><br>
+
+              <label for="lastname"><b>Last Name:</b></label>
+              <input type="text" id="lastname" placeholder="Enter Last Name" name="last name" required><br>
+          
+              <label for="email"><b>Email:</b></label>
+              <input type="text" id="email" placeholder="Enter Email" name="email" required><br>
+
+              <label for="phonenumber"><b>Phone Number:</b></label>
+              <input type="text" id="phonenumber" placeholder="Enter Phone Number" name="phone number" required><br>
+
+              <label for="emergencycontact"><b>Emergency Contact:</b></label>
+              <input type="text" id="emergencycontact" placeholder="Enter Emergency Contact" name="Emergency Contact" required><br>
+
+              <label for="address"><b>Address:</b></label>
+              <input type="text" id="address" placeholder="Enter Address" name="address" required><br>
+
+              <label for="username"><b>Username:</b></label>
+              <input type="text" id="username" placeholder="Enter Username" name="username" required><br>
+              
+          
+              <label for="psw"><b>Password:</b></label>
+              <input type="password" id="password" placeholder="Enter Password" name="psw" required><br>
+
+              <label for="repeatpsw"><b>Confirm Password:</b></label>
+              <input type="password" id="repeatpassword" placeholder="Repeat Password" name="psw-repeat" required><br>
+              <hr>
+
+              <button id="submit">Submit</button>
+            </div>
+          
+            <div class="container signin">
+              <p>Already have an account? <a href="volunteerpage.html">Log in</a>.</p>
+            </div>
+          </form>
 </body>
 </html>

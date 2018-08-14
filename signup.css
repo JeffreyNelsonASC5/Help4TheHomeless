@@ -1,11 +1,6 @@
 body{
     background: #333;
 }
-#image{
-    display: flex;
-    justify-content: center;
-    margin: 4em;
-}
 nav{
     background-color: #333;
     display: flex; 
@@ -14,6 +9,7 @@ nav{
     justify-content: space-between;
 }
 ul {
+    margin: 4em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -56,14 +52,11 @@ a:hover{
 .greennav a:hover{
     background-color: green;
 }
-#AboutUs{
-    color: snow;
+.container{
     text-align: center;
-}
-.aboutus h1{
-    color: red
-}
-.aboutus li{
-    list-style-type: none;
     color: snow;
+}
+.container h1{
+    color: snow;
+    margin-top: 4em;
 }
