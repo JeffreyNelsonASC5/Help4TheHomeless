@@ -1,16 +1,70 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="dashboard.js" defer></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="dashboard.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Inline|Bungee+Shade|Montserrat+Subrayada:700" rel="stylesheet">
+    
     <title>Dashboard</title>
+    
 
 </head>
 <body>
+    <div id="nav" class="nav">
+        <div class="leftnav">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li class="greennav"><a href="donatepage.html">Donate</a></li>
+                    <li class="greennav"><a href="volunteerpage.html">Volunteer</a></li>
+                    <li class="greennav"><a href="contactuspage.html">Contact Us</a></li>
+                    <li><a href="member.html">Our Members</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                    <li><a href="loginPage.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div id="rectangle1" class="rectangle1">
+        BOB SAGET
+    </div>
+    <div id="rectangle2" class="rectangle2">
+        <ul>
+            <li>Username: LilBobby1!</li>
+            <hr>
+            <li>Password: LilBobby1!</li>
+            <hr>
+            <li>Email: bobsaget@gmail.com</li>
+            <hr>
+            <li>Phone Number: (123)-456-7890</li>
+            <hr>
+            <li>Address: 12 3rd Street, New York, New York</li>
+            <hr>
+        </ul>
+    </div>
+    <div id="rectangle3" class="rectangle3"> 
+        <ul>
+            <li>Went to more than 30 homeless people in Queens, NY and handed out food</li>
+            <li>Went to Manhattan, NY and handed out 20 dollars to each person that I encountered</li>
+            <li>Donated $100 to Help4TheHomeless organization</li>                  
+        </ul>
 
-    
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBmTrOqzTHNaxk0h6IgGEkvl0j-FTH1jv8",
+            authDomain: "help4thehomeless-a62a9.firebaseapp.com",
+            databaseURL: "https://help4thehomeless-a62a9.firebaseio.com",
+            projectId: "help4thehomeless-a62a9",
+            storageBucket: "help4thehomeless-a62a9.appspot.com",
+            messagingSenderId: "857895826074",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="signup.js"></script>"]
+    <script src="dashboard.js"></script>
 </body>
 </html>

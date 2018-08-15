@@ -4,9 +4,9 @@ function openNav() {
 
 let submit = document.getElementById("submit");
 //console.log(submit);
-submit.addEventListener("click", updateDB)
+if(submit)
+    submit.addEventListener("click", updateDB)
 
-const database = firebase.database().ref();
 
 function updateDB(event){
    event.preventDefault();
@@ -42,17 +42,47 @@ function updateDB(event){
    passwordDOM.value = "";
    repeatpasswordDOM.value = "";
 
-    const value = {
-       FIRSTNAME: firstname,
-       LASTNAME: lastname,
-       EMAIL: email,
-       PHONENUMBER: phonenumber,
-       ADDRESS: address,
-       EMERGENCYCONTACT: emergencycontact,
-       USERNAME: username,
-       PASSWORD: password,
-       REPEATPASSWORD: repeatpassword,
-   }
-   database.push(value);
+   firebase.auth().createUserWithEmailAndPassword(email, password).then(function(data){
+       console.log("register")
+    const user = firebase.auth().currentUser; // Gets current user
+    const userDatabase = firebase.database().ref("users/" + user.uid).set({
+        FIRSTNAME: firstname,
+        LASTNAME: lastname,
+        EMAIL: email,
+        PHONENUMBER: phonenumber,
+        ADDRESS: address,
+        EMERGENCYCONTACT: emergencycontact,
+        USERNAME: username,
+        PASSWORD: password,
+        REPEATPASSWORD: repeatpassword,
+    })
+    });
    console.log("hey");
 }
+const loginButton = document.getElementById("login-button");
+const emailData = document.getElementById("email");
+const passwordData = document.getElementById("password");
+
+if(loginButton && emailData && passwordData) {
+    console.log("cool")
+    console.log(loginButton)
+    loginButton.addEventListener("click", function(e) {
+        console.log("hnnng")
+        e.preventDefault();
+
+    // Firebase sign in below
+        firebase.auth().signInWithEmailAndPassword(emailData.value, passwordData.value).then(function(data) {
+            console.log(data)
+        });
+    }, false);
+}
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        console.log("Thank you Dad Moe")
+      // User is signed in.
+    } else {
+        console.log("Fuck you Moe")
+      // No user is signed in.
+    }
+  });

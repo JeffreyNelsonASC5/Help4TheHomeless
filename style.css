@@ -8,6 +8,7 @@ body{
 }
 nav{
     background-color: #333;
+    font-family: 'Montserrat Subrayada', sans-serif;
     display: flex; 
     flex-direction: row;
     align: top;
@@ -57,6 +58,7 @@ a:hover{
     background-color: green;
 }
 #AboutUs{
+    font-family: 'Sahitya', serif;
     color: snow;
     text-align: center;
 }
@@ -64,6 +66,5 @@ a:hover{
     color: red
 }
 .aboutus li{
-    list-style-type: none;
     color: snow;
 }
